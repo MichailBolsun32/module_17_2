@@ -15,8 +15,6 @@ from sqlalchemy.orm import relationship
 
 class Task(Base):
     __tablename__ = 'tasks'
-    #__table_args__ = {'keep_existing' : True} # для создания дополнительных параметров в  таблицах
-    # в нашем примере скорее всего для управления миграциями
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     content = Column(String)
